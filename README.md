@@ -41,7 +41,9 @@ def process_source(text):
 def extract_comment(comment):
     """ Extract the content of a comment from a quoted comment string """
     return re.match(
-        r"^\s*(?:(?:\"(?:\"\")?)|(?:\'(?:\'\')?))(.*?)(?:(?:\"(?:\"\")?)|(?:\'(?:\'\')?))\s*$", comment, flags=re.DOTALL
+        r"^\s*(?:(?:\"(?:\"\")?)|(?:\'(?:\'\')?))(.*?)(?:(?:\"(?:\"\")?)|(?:\'(?:\'\')?))\s*$",
+        comment,
+        flags=re.DOTALL,
     ).group(1)
 ```
 
